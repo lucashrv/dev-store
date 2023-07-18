@@ -1,0 +1,15 @@
+.logo {
+    color: #3ca0e7;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.cart {
+    color: #3ca0e7;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.logo:hover, .cart:hover {
+    color: #3180b9;
+}
