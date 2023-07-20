@@ -4,7 +4,8 @@ export default function Input (props) {
     const {
         title = 'Title',
         value,
-        onChange
+        onChange,
+        onKeyUp
     } = props
 
     return <>
@@ -14,6 +15,7 @@ export default function Input (props) {
                 type="text"
                 value={value}
                 onChange={onChange}
+                onKeyUp={onKeyUp}
                 required
             />
             <div className="underline"></div>
