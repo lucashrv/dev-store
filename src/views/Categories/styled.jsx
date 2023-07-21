@@ -11,9 +11,10 @@ export const MainStyled = styled.main`
 `
 
 export const DivSearch = styled.div`
-    width: 100%;
     margin-top: 30px;
     margin-bottom: 30px;
+    display: flex;
+    align-items: center;
 `
 
 export const CategoriesSection = styled.section`
@@ -50,4 +51,13 @@ export const IconBox = styled.div`
         cursor: pointer;
         font-size: 2rem;
     }
+`
+
+export const NewCatContainer = styled.div`
+    margin-top: 50px;
+`
+
+export const ButtonBox = styled.div`
+    display: flex;
+    align-items:center;
 `

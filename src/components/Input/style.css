@@ -21,8 +21,8 @@
   }
   .input-data input:focus ~ label,
   .input-data input:valid ~ label{
-    transform: translateY(-20px);
-    font-size: 15px;
+    transform: translateY(-25px);
+    font-size: 14px;
     color: #3ca0e7;
   }
   .wrapper .input-data label{
