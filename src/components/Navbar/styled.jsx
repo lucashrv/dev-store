@@ -15,8 +15,6 @@ export const HeaderStyled = styled.header`
 `
 
 export const CartStyled = styled.div`
-    width: 100px;
-
     & a {
         display: flex;
         align-items: center;

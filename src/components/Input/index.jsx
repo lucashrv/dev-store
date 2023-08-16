@@ -3,6 +3,7 @@ import './style.css'
 export default function Input (props) {
     const {
         title = 'Title',
+        type = 'text',
         value,
         onChange,
         onKeyUp
@@ -12,7 +13,7 @@ export default function Input (props) {
         <div className="wrapper">
          <div className="input-data">
             <input
-                type="text"
+                type={type}
                 value={value}
                 onChange={onChange}
                 onKeyUp={onKeyUp}

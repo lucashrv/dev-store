@@ -4,7 +4,7 @@ export const ButtonStyled = styled.button`
     color: ${props => props.color ? props.color : '#000'};
     background-color: ${props => props.variant ? props.variant : "#fff"};
     border: none;
-    padding: 10px 15px;
+    padding: ${props => props.padding ? props.padding : "10px 15px"};;
     border-radius: 5px;
     cursor: pointer;
 

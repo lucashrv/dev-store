@@ -18,7 +18,7 @@ import { useNavigate  } from "react-router-dom";
 
 export default function Categories() {
 
-    const URL = "http://localhost:8080/api/categories"
+    const URL = `${import.meta.env.VITE_URL}/categories`
     const { data: categoriesList, loading, error } = useApi(`${URL}/getAll`)
     const navigate = useNavigate();
 
@@ -146,7 +146,7 @@ export default function Categories() {
                     })
                 }
 
-                {!loading && searchedData.length === 0 && <h4>Nenhuma categoria encontrada</h4>}
+                {!loading && !error && searchedData.length === 0 && <h4>Nenhuma categoria encontrada</h4>}
 
             </CategoriesSection>
         </MainStyled>

@@ -7,8 +7,13 @@ import {
 } from "./styled.jsx"
 import './style.css'
 import { Link } from "react-router-dom"
+import { useSelector } from 'react-redux';
+import { useMemo } from "react";
+import { selectProductsCount } from './../../redux/cart/cart.selectors';
 
 export default function Navbar() {
+    const productsCount = useSelector(selectProductsCount)
+
     return <>
         <HeaderStyled>
             <DivNavStyled>
@@ -29,7 +34,7 @@ export default function Navbar() {
                             shopping_cart
                         </span>
 
-                        Carrinho
+                        {`Carrinho(${productsCount})`}
                     </Link>
                 </CartStyled>
 

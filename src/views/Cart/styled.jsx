@@ -67,6 +67,7 @@ export const CardsContainer = styled.div`
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
+    margin-top: 10px;
 
     & p {
         margin: 0 auto;
