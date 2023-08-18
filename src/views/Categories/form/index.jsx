@@ -21,7 +21,7 @@ export default function CategoriesForm() {
     const urlPost = `${import.meta.env.VITE_URL}/categories/create`
     const urlPut = `${import.meta.env.VITE_URL}/categories/update/${id}`
 
-    const { data: category } = useApi(`${import.meta.env.VITE_URL}/categories/${id}`)
+    const { data: category } = useApi(`${import.meta.env.VITE_URL}/categories/${id ?? 0}`)
 
     useEffect(() => {
         if(id) {

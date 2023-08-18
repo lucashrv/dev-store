@@ -3,7 +3,6 @@ import styled from 'styled-components'
 export const MainStyled = styled.main`
     width: 90%;
     margin: 30px auto;
-    /* min-height: 80vh; */
     padding: 20px 30px;
     background: #fff;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
@@ -15,6 +14,10 @@ export const DivSearch = styled.div`
     margin-bottom: 30px;
     display: flex;
     align-items: center;
+
+    @media only screen and (max-width: 768px) {
+        flex-direction: column;
+    }
 `
 
 export const CategoriesSection = styled.section`
@@ -62,10 +65,9 @@ export const ButtonBox = styled.div`
     align-items:center;
 `
 export const CardsContainer = styled.div`
-    border: 1px solid green;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, auto));
+    justify-self: center;
     align-items: center;
 
     & p {

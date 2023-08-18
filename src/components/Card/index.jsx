@@ -34,14 +34,8 @@ export default function Card(props) {
 
     const dispatch = useDispatch()
 
-    const product = useSelector(state => state.cartReducer.products)
-
     const [titleFormat, setTitleFormat] = useState(title)
     const [categoryFormat, setCategoryFormat] = useState(category)
-
-    useEffect(() => {
-        console.log(product);
-    }, [product])
 
     useEffect(() => {
         // Format large words to ( word... )

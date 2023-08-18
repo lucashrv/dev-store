@@ -6,7 +6,7 @@ export const CardContainer = styled.div`
     height: 300px;
     border-radius: 10px;
     color: #000;
-    margin: 5px auto;
+    margin: 15px auto;
     transition: all .5s;
 
     &:hover {

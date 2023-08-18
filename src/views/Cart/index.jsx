@@ -1,11 +1,8 @@
-import { useEffect } from 'react';
 import {
     MainStyled,
     CardsContainer
 } from "./styled"
 import Card from '../../components/Card/index';
-import { ToastContainer } from 'react-toastify';
-import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { selectProductsTotalPrice } from '../../redux/cart/cart.selectors';
 
@@ -14,9 +11,6 @@ export default function Products() {
     const { products } = useSelector(state => state.cartReducer)
     const totalPrice = useSelector(selectProductsTotalPrice)
 
-    useEffect(() => {
-        console.log(products);
-    }, [products])
     return <>
         <MainStyled>
             <h1>Carrinho</h1>

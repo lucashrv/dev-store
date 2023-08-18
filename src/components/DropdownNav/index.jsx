@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom'
 
 export default function DropdownNav() {
     return <>
-        <nav role="navigation" className="primary-navigation">
+        <nav id='main-nav' role="navigation" className="primary-navigation">
             <ul>
-                {/* <li><a href="/">Home</a></li> */}
                 <li><Link to="/"  className='color_links' >Home</Link></li>
                 <li><p className='color_links'>Produtos &darr;</p>
                     <ul className="dropdown">

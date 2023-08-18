@@ -2,6 +2,7 @@
     color: #3ca0e7;
     font-size: 1.5rem;
     cursor: pointer;
+    min-width: 90px;
 }
 
 .cart {
@@ -12,4 +13,18 @@
 
 .logo:hover, .cart:hover {
     color: #3180b9;
+}
+
+.menu_mobile_down {
+    top: 50px;
+}
+
+.menu_mobile_up {
+    bottom: 100vh;
+}
+
+@media (max-width: 700px) {
+    .logo {
+        font-size: 1.1rem;
+    }
 }

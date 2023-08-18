@@ -3,7 +3,6 @@ import styled from 'styled-components'
 export const MainStyled = styled.main`
     width: 90%;
     margin: 30px auto;
-    /* min-height: 80vh; */
     padding: 20px 30px;
     background: #fff;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
@@ -19,16 +18,20 @@ export const DivSearch = styled.div`
 
 export const CategoriesSection = styled.section`
     padding: 20px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, auto));
+    justify-items: center;
+    align-items: center;
+
+    @media only screen and (max-width: 415px) {
+        grid-template-columns: repeat(auto-fill, minmax(250px, auto));
+    }
 `
 
 export const CategoriesBox = styled.div`
-    border: 2px solid;
+    border: 1px solid;
     border-radius: 15px 3px 15px 3px;
-    min-width: 500px;
-    max-width: 500px;
+    width: 300px;
     height: 50px;
     margin: 10px 10px;
     padding: 0 15px;
@@ -37,7 +40,11 @@ export const CategoriesBox = styled.div`
     justify-content: space-between;
 
     & h3 {
-        max-width: 350px;
+        font-size: .8rem;
+    }
+
+    @media only screen and (max-width: 415px) {
+        width: 250px;
     }
 `
 

@@ -19,21 +19,11 @@ export default function ProductsForm() {
     const { id } = useParams()
 
     const [localState, setLocalState] = useState({})
-    // const urlPatch = `${import.meta.env.VITE_URL}/products/update/${id}`
     const urlProducts = import.meta.env.VITE_URL + '/products'
     const urlCategories = import.meta.env.VITE_URL + '/categories'
 
     const { data: product, loading, error } = useApi(`${urlProducts}/getOne/${id ?? 0}`)
     const { data: categories } = useApi(`${urlCategories}/getAll`)
-
-
-    // const { data: product } = useApi(`${import.meta.env.VITE_URL}/categories/${id}`)
-
-    // useEffect(() => {
-    //     if(id) {
-    //         setName(category.name)
-    //     }
-    // }, [id, category])
 
     const navigate = useNavigate()
 
@@ -46,8 +36,8 @@ export default function ProductsForm() {
     const updateLocalState = useCallback(
         (key, value) => {
             setLocalState(prev => ({ ...prev, [key]: value }))
-        }
-    )
+        },
+    [])
 
     const handleSave = async (e) => {
         if (!localState.name) {
@@ -103,7 +93,7 @@ export default function ProductsForm() {
 
             }
             else {
-                await axios.put(`${urlProducts}/patch`, {
+                await axios.patch(`${urlProducts}/update/${localState.id}`, {
                     name: localState.name,
                     description: localState.description,
                     categoryId: localState.categoryId,

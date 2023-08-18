@@ -117,12 +117,9 @@ export default function Products() {
                     valid = true
                 }
 
-                console.log(+item.categoryId)
-
                 return valid
             }))
     }
-
 
     return <>
         <MainStyled>
@@ -135,7 +132,7 @@ export default function Products() {
                     onChange={(e) => setSearchValue(e.target.value.toLowerCase())}
                 />
 
-                <Separator width='30px' />
+                <Separator width='30px' height='15px' />
 
                 <Select
                     title='Categorias'
@@ -153,7 +150,7 @@ export default function Products() {
                     onChange={e => setSearchCategory(e.target.value)}
                 />
 
-                <Separator width='30px' />
+                <Separator width='30px' height='15px' />
 
                 <Button
                     onClick={() => navigate("/products/register")}
