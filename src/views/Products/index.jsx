@@ -47,9 +47,10 @@ export default function Products() {
 
             await axios.delete(`${urlProducts}/destroy/${id}`)
 
-            setProductsData(products.filter(item => item.id !== id))
+            setProductsData(productsData.filter(item => item.id !== id))
             setOpenModal(false)
-
+            console.log(products);
+            console.log(productsData);
             notifySuccess('Produto deletado com sucesso')
 
         } catch (error) {
