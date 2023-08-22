@@ -24,14 +24,16 @@ export default function CategoriesForm() {
     const { data: category } = useApi(`${import.meta.env.VITE_URL}/categories/${id ?? 0}`)
 
     useEffect(() => {
-        if(id) {
+        if (id) {
             setName(category.name)
         }
     }, [id, category])
 
     const navigate = useNavigate()
 
-    const handleSave = async () => {
+    const handleSave = async (e) => {
+        e.preventDefault()
+
         if (!name) {
             notifyError('Nome é obrigatório')
             return
@@ -62,34 +64,35 @@ export default function CategoriesForm() {
             <h1>{id ? 'Edição de categoria' : 'Cadastro de categoria'}</h1>
 
             <NewCatContainer>
-                <Input
-                    title='Nome'
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                />
+                <form onSubmit={handleSave}>
+                    <Input
+                        title='Nome'
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                    />
 
-                <Separator height='30px' />
+                    <Separator height='30px' />
 
-                <ButtonBox>
-                    <Button
-                        onClick={handleSave}
-                        color='#fff'
-                        variant='#5cb85c'
-                        type='submit'
-                    >
-                        {id ? 'Atualizar' : 'Cadastrar'}
-                    </Button>
+                    <ButtonBox>
+                        <Button
+                            color='#fff'
+                            variant='#5cb85c'
+                            type='submit'
+                        >
+                            {id ? 'Atualizar' : 'Cadastrar'}
+                        </Button>
 
-                    <Separator width='20px' />
+                        <Separator width='20px' />
 
-                    <Button
-                        onClick={() => navigate('/categories')}
-                        color='#fff'
-                        variant='#434343'
-                    >
-                        Voltar
-                    </Button>
-                </ButtonBox>
+                        <Button
+                            onClick={() => navigate('/categories')}
+                            color='#fff'
+                            variant='#434343'
+                        >
+                            Voltar
+                        </Button>
+                    </ButtonBox>
+                </form>
             </NewCatContainer>
         </MainStyled>
         <ToastContainer />

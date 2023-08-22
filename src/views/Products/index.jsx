@@ -170,7 +170,7 @@ export default function Products() {
                         <Card
                             key={product.id}
                             id={product.id}
-                            img={product.image ? import.meta.env.VITE_IMG_URL + product.image : ''}
+                            img={product.image ? product.image : ''}
                             title={product.name}
                             category={product["category.name"]}
                             amount={product.amount}
