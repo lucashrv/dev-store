@@ -1,4 +1,5 @@
 ### Deploy front netlify - [dev-store](https://dev-store-app.netlify.app)
+
 ### Deploy back vercel - link repositório [api-dev-store](https://github.com/lucashrv/api-dev-store)
 
 #### Projeto full-stack possuindo funcionalidades de listagem, criação, edição e deleção de categorias e produtos, nos produtos possuindo upload de imagem com storage no firebase, com funcionalidade de carrinho podendo adicionar ou remover quantidade e totalização dos preços, categorias e produtos possuem pesquisa e produto possui filtro por categorias na listagem
