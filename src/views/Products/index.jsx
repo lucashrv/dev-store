@@ -49,8 +49,7 @@ export default function Products() {
 
             setProductsData(productsData.filter(item => item.id !== id))
             setOpenModal(false)
-            console.log(products);
-            console.log(productsData);
+
             notifySuccess('Produto deletado com sucesso')
 
         } catch (error) {
